@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
 import Header from '../../components/Header';
 import { sanityClient, urlFor } from '../../sanity';
@@ -47,7 +48,7 @@ const Post = ({ post }: Props) => {
 
       <img
         className='w-full h-52 object-cover  border-b border-yellow-40 shadow-sm'
-        src={urlFor(post.mainImage)}
+        src={urlFor(post.mainImage).url()}
         alt=''
       />
 
